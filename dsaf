@@ -1,0 +1,43 @@
+[33mcommit dd97a9d342d8f734ccfec4cba6006643df1832fa[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: 류재혁 <65850233+fbwogur121@users.noreply.github.com>
+Date:   Wed Jan 3 00:50:39 2024 +0000
+
+    master branch test
+
+[33mcommit c35f08adf6f355cc5178d7f4eee8a5cca570a1da[m
+Author: 류재혁 <65850233+fbwogur121@users.noreply.github.com>
+Date:   Wed Jan 3 00:46:51 2024 +0000
+
+    prot -> prot 오타 수정
+
+[33mcommit 3add0a28593873aad03f06af904e45512cb39665[m
+Author: 류재혁 <65850233+fbwogur121@users.noreply.github.com>
+Date:   Wed Jan 3 00:37:18 2024 +0000
+
+    application.yml
+
+[33mcommit d48cea1b5b591d8e7c9c7d510b1a136369f9fdf3[m
+Author: fbwougr121 <fbwogur121@naver.com>
+Date:   Sun Dec 3 17:56:00 2023 +0900
+
+    :white_check_mark: Gitmoji test title
+    
+    gitmoji test message
+
+[33mcommit e280331f113af05e60966bc93d7334ff8778d9d7[m
+Author: fbwougr121 <fbwogur121@naver.com>
+Date:   Sun Dec 3 16:30:54 2023 +0900
+
+    test commit
+
+[33mcommit 90052ba8be7131dc0f92a59a20ab9f5e3a1128fe[m
+Author: fbwougr121 <fbwogur121@naver.com>
+Date:   Mon Nov 27 19:39:53 2023 +0900
+
+    ..
+
+[33mcommit 8db3fafbd62097c125b317549dc1f7f0c6ce2225[m
+Author: fbwougr121 <fbwogur121@naver.com>
+Date:   Mon Nov 27 19:38:01 2023 +0900
+
+    git test
