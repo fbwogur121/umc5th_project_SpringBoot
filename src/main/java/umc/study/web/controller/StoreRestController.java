@@ -1,23 +1,32 @@
 package umc.study.web.controller;
 
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-import umc.study.apiPayload.ApiResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+import umc.study.apiPayload.ApiResponse;
+import umc.study.converter.StoreConverter;
+import umc.study.domain.Review;
+import umc.study.service.StoreService.StoreCommandService;
+import umc.study.validation.annotation.ExistMember;
+import umc.study.validation.annotation.ExistStore;
+import umc.study.web.dto.StoreRequestDTO;
 import umc.study.web.dto.StoreResponseDTO;
 
-@RestController
-@RequiredArgsConstructor
-@Validated
-@RequestMapping("/store")
-public class StoreRestController {
-    
-    @GetMapping("/{storeId}/reviews")
-    public ApiResponse<StoreResponseDTO.ReviewPreViewListDTO> getReviewList(@ExistStore @PathVariable(name = "storeId") Long storeId){
-        return null;
-    }
+import javax.validation.Valid;
 
+@RestController
+@Validated
+@RequiredArgsConstructor
+@RequestMapping("/stores")
+public class StoreRestController {
+
+    private final StoreCommandService storeCommandService;
+
+    @PostMapping("/{storeId}/reviews")
+    public ApiResponse<StoreResponseDTO.CreateReviewResultDTO> createReview(@RequestBody @Valid StoreRequestDTO.ReveiwDTO request,
+                                                                            @ExistStore @PathVariable(name = "storeId") Long storeId,
+                                                                            @ExistMember @RequestParam(name = "memberId") Long memberId){
+        Review review = storeCommandService.createReview(memberId, storeId, request);
+        return ApiResponse.onSuccess(StoreConverter.toCreateReviewResultDTO(review));
+    }
 }

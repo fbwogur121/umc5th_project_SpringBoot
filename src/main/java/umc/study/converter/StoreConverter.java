@@ -2,12 +2,13 @@ package umc.study.converter;
 
 import umc.study.domain.Review;
 import umc.study.web.dto.StoreRequestDTO;
-import umc.study.web.dto.StoreRequestDTO;
 import umc.study.web.dto.StoreResponseDTO;
+
+import java.time.LocalDateTime;
 
 public class StoreConverter {
 
-    public static Review toReview(StoreRequestDTO.ReviewDTO request){
+    public static Review toReview(StoreRequestDTO.ReveiwDTO request){
         return Review.builder()
                 .title(request.getTitle())
                 .score(request.getScore())
@@ -20,12 +21,5 @@ public class StoreConverter {
                 .reviewId(review.getId())
                 .createdAt(LocalDateTime.now())
                 .build();
-    }
-
-    public static StoreResponseDTO.ReviewPreViewDTO reviewPreViewDTO(Review review){
-        return null;
-    }
-    public static StoreResponseDTO.ReviewPreViewListDTO reviewPreViewListDTO(List<Review> reviewList){
-        return null;
     }
 }
