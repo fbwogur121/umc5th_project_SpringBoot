@@ -2,7 +2,7 @@ package umc.study.service.MemberService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Transactional; //@Transactional은 우선순위를 가지고 있음. 클래스 메소드 > 클래스 > 인터페이스 메소드 > 인터페이스. 또한 인터페이스보다는 클래스에 적용하는 것을 권고함.
 import umc.study.apiPayload.code.status.ErrorStatus;
 import umc.study.apiPayload.exception.handler.FoodCategoryHandler;
 import umc.study.converter.MemberConverter;
