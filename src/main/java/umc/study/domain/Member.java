@@ -21,6 +21,7 @@ import java.util.List;
 @Getter
 @DynamicUpdate
 @DynamicInsert
+// @DynamicUpdate, @DynamicInsert는  insert와 update시 null인 경우는 쿼리를 보내지 않도록 해준다.
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
